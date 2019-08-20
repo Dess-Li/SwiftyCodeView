@@ -102,7 +102,7 @@ extension SwiftyCodeView: UITextFieldDelegate, SwiftyCodeTextFieldDelegate {
     
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        if string == "" { //is backspace
+        if string == "" || string.count > 1 { //is backspace
             return true
         }
         
